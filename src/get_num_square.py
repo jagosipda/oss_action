@@ -1,6 +1,6 @@
 import os
 
-    num = os.environ.get("INPUT_NUM")
+num = os.environ.get("INPUT_NUM")
 if num:
     try:
         num = int(num)
@@ -9,4 +9,4 @@ if num:
 else:
     num = 1
     
-print(f"::set-output name=num_squared::{num ** 2}")  
+print(f"::set-output name=num_squared::{num ** 2}")
