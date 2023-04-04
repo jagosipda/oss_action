@@ -1,8 +1,8 @@
 name: Test Action
 on: [push]
 
-  jobs:
-   get-num-sqrare:
+jobs:
+  get-num-sqrare:
     runs-on: ubuntu-latest
     name: Returns the number square
     steps:
