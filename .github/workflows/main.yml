@@ -2,7 +2,7 @@ name: Test Action
 on: [push]
 
 jobs:
-  get-num-sqrare:
+  get-num-square:
     runs-on: ubuntu-latest
     name: Returns the number square
     steps:
