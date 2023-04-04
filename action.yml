@@ -2,9 +2,9 @@ name: 'Custom Github Action'
 description: 'takes number and return the squared number'
 input: 
   num:
-  description: 'Enter a number'
-  required: true
-  default: "1"
+    description: 'Enter a number'
+    required: true
+    default: "1"
 outputs:
   num_squared:
     descrotion: 'Square of the input'
@@ -16,16 +16,14 @@ runs:
       uses: action/setup-python@v4
       with:
         python-version: '3.10'
-    -name: Install dependencies
-     run: pip install -r requirements.txt
-     shell: bash
-    -name: Pass inputs to shell
-     run: |
-       echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
-     shell: bash
-    -name: Fetch the number's square
-     id: get-square
-     run: python src/get_num_square.py
-     shell: bash
-    
-  
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+      shell: bash
+    - name: Pass inputs to shell
+      run: |
+        echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+      shell: bash
+    - name: Fetch the number's square
+      id: get-square
+      run: python src/get_num_square.py
+      shell: bash
