@@ -1,6 +1,6 @@
 name: 'Custom Github Action'
 description: 'takes number and return the squared number'
-input: 
+inputs: 
   num:
     description: 'Enter a number'
     required: true
@@ -13,7 +13,7 @@ runs:
   using: 'composite'
   steps: 
     - name: Install Python
-      uses: action/setup-python@v4
+      uses: actions/setup-python@v4
       with:
         python-version: '3.10'
     - name: Install Dependencies
